@@ -3,7 +3,7 @@ Exercise 01: Conditionals, variables
 
 Tutorials & Resources:
 -------
-Take a look at these online resources before you attempt this exercise. If you get stuck, check the work you've already completed. Do these before starting the exercise below.
+Take a look at these online resources before you attempt this exercise. The information contained in them is necessary to complete the exercise. If you get stuck, refer back to these exercises. Do these before starting the exercise below.
 
     * http://learnpythonthehardway.org/book/ex6.html
     * http://learnpythonthehardway.org/book/ex7.html
@@ -47,11 +47,11 @@ In general, a program is structured like this:
 In the case of 'cat', input comes from the file specified on the command line. In the calculator, input comes from the keyboard.
 
 
-Description
--------
+Exercise
+--------
 Write a program named guess.py that plays the 'number guessing game'. The computer will choose a random number between 1 and 100, and ask the user to guess the number, giving them a hint if it's high or low. A sample game looks like this:
 
-Meringue:guessing chriszf$ python ./guess.py 
+Meringue:guessing chriszf$ python ./guess.py
 Howdy, what's your name?
 (type in your name) Christian
 Christian, I'm thinking of a number between 1 and 100. Try to guess my number.
@@ -86,6 +86,6 @@ A rough pseudocode outline of the program will look like this:
             give hint
         else:
             congratulate player
-            
+
 
 

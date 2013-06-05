@@ -37,17 +37,16 @@ def format_stanza(stanza):
     line = []
     for i in stanza:
         line.append(i)
-        if i.endswith((",",";","?","--")) == True:
+        if i.endswith((",",";","?","--",":")) == True and stanza[stanza.index(i)+1].islower() == False:
             lines.append(" ".join(line))
             line = []
     lines.append(" ".join(line))
     for i in lines:
         print i
 
-def make_text(chains):
+def make_text(chains, num_stanzas):
     """Takes a dictionary of markov chains and returns random text
     based off an original text."""
-    num_stanzas = 4
     start_lines = start_keys(chains)
 
     for i in range(num_stanzas):
@@ -64,10 +63,10 @@ def main():
     # Change this to read input_text from a file
     f = open("burns-poems-and-songs.txt")
     input_text = f.read()
-    num_stanzas = args[1]
+    num_stanzas = int(args[1])
 
     chain_dict = make_chains(input_text)
-    random_text = make_text(chain_dict)
+    random_text = make_text(chain_dict, num_stanzas)
     print random_text
 
 if __name__ == "__main__":
